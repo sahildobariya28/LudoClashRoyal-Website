@@ -1,191 +1,502 @@
-<!--
-=========================================================
-DEFAULT WEB PAGE - THIS FILE CANNOT BE EDITED
-COPYRIGHT INFINITYFREE
-=========================================================
-
-This default web page is protected against modifications.
-
-To upload your own site, please delete this file and
-upload your own page as "index.php" or "index.html".
-
-=========================================================
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to your InfinityFree website</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400">
-    <link rel="stylesheet" href="https://vpassets.infinityfree.net/welcome2024/style.css">
-    <link rel="icon" href="https://vpassets.infinityfree.net/welcome2024/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://vpassets.infinityfree.net/welcome2024/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Clash Royal - Play & Win Real Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 .highlight {
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .features-list li {
+            font-size: 1.1rem;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            background: #ffd700;
+            color: #667eea;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #667eea;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            text-align: center;
+            perspective: 1000px;
+        }
+
+        .game-mockup {
+            font-size: 150px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: #f8f9ff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .download-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .play-store-btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-store-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-store-icon {
+            font-size: 24px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .game-mockup {
+                font-size: 100px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            .play-store-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-nav {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <div class="site-header-inner">
-                <div class="brand header-brand">
-                    <h1 class="m-0">
-                        <a href="https://www.infinityfree.com">
-                            <img src="https://vpassets.infinityfree.net/welcome2024/logo-header.png" alt="InfinityFree">
-                        </a>
-                    </h1>
-                </div>
+            <div class="header-content">
+                <div class="logo">🎲 Ludo Clash Royal</div>
+                <nav class="header-nav">
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                </nav>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-inner">
-                    <div class="hero-copy">
-                        <h1 class="hero-title h2-mobile mt-0">
-                            Your domain
-                            <br /> is ready!
-                        </h1>
-                        <p class="hero-paragraph">
-                            This page is loaded from the directory <strong class="path-var">"ludoclashroyal.great-site.net/htdocs"</strong> of your InfinityFree hosting account. So you are ready to set up your website!
-                        </p>
-                        <p class="hero-cta">
-                            <a class="button button-primary button-shadow" href="https://forum.infinityfree.com/docs?topic=49312" target="_blank">
-                                Open Getting Started Guide
-                            </a>
-                        </p>
-                    </div>
-                    <div class="hero-illustration">
-                        <img src="https://vpassets.infinityfree.net/welcome2024/hero-illustration.svg" alt="Illustration">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features section text-center">
-            <div class="section-square"></div>
-            <div class="container">
-                <div class="features-inner section-inner">
-                    <div class="features-wrap">
-                        <div class="feature">
-                            <div class="feature-inner">
-                                <h4 class="feature-title h3-mobile">1. Find website folder</h4>
-                                <p class="text-sm">
-                                    You can find the website of this domain name in the directory <strong class="path-var">"ludoclashroyal.great-site.net/htdocs"</strong> on your account.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-inner">
-                                <h4 class="feature-title h3-mobile">2. Upload an index file</h4>
-                                <p class="text-sm">
-                                    In your website directory, upload a file with the name <strong>index.php</strong> or <strong>index.html</strong> to act as the home page.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-inner">
-                                <h4 class="feature-title h3-mobile">3. Delete index2.html</h4>
-                                <p class="text-sm">
-                                    When your own website is set up, you can delete this file, called <strong>index2.html</strong>, from your website folder.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="pricing section">
-            <div class="section-square"></div>
-            <div class="container">
-                <div class="pricing-inner section-inner has-top-divider">
-                    <h2 class="section-title mt-0 text-center">How to build a website</h2>
-                    <div class="pricing-tables-wrap">
-                        <div class="pricing-table">
-                            <div class="pricing-table-inner">
-                                <div class="pricing-table-main">
-                                    <h4 class="feature-title h3-mobile">Site.Pro Builder</h4>
-                                    <p class="text-sm">
-                                        Use the Site.pro website builder, included with InfinityFree, to build anything from simple landing pages to fully featured online stores.
-                                        All fully SEO optimized, completely mobile friendly and available in many languages.
-                                    </p>
-                                </div>
-                                <div class="pricing-table-cta">
-                                    <a class="button button-primary button-shadow button-block" href="https://forum.infinityfree.com/docs?topic=94339" target="_blank">
-                                        Learn about Site.Pro
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pricing-table">
-                            <div class="pricing-table-inner">
-                                <div class="pricing-table-main">
-                                    <h4 class="feature-title h3-mobile">Softaculous Installer</h4>
-                                    <p class="text-sm">
-                                        Use the Softaculous automatic script installer to install one of over 400 scripts, applications and CMS like WordPress with only a few clicks, and automatically keep them up to date.
-                                    </p>
-                                </div>
-                                <div class="pricing-table-cta">
-                                    <a class="button button-primary button-shadow button-block" href="https://forum.infinityfree.com/docs?topic=49314" target="_blank">
-                                        Learn about Softaculous
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pricing-table">
-                            <div class="pricing-table-inner">
-                                <div class="pricing-table-main">
-                                    <h4 class="feature-title h3-mobile">Upload your own</h4>
-                                    <p class="text-sm">
-                                        Migrate your existing website from your previous hosting provider, or build your own website using the tools of your choice! With PHP and MySQL support, you can build almost anything.
-                                    </p>
-                                </div>
-                                <div class="pricing-table-cta">
-                                    <a class="button button-primary button-shadow button-block" href="https://forum.infinityfree.com/docs?topic=49306">
-                                        Learn about Uploading
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer text-light">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="site-footer-inner has-top-divider">
-                <div class="brand footer-brand">
-                    <a href="https://www.infinityfree.com">
-                        <img src="https://vpassets.infinityfree.net/welcome2024/logo-footer.png" alt="InfinityFree">
-                    </a>
-                </div>
-                <ul class="footer-links list-reset">
-                    <li>
-                        <a href="https://dash.infinityfree.com/login">Client Area</a>
-                    </li>
-                    <li>
-                        <a href="https://forum.infinityfree.com/docs">Knowledge Base</a>
-                    </li>
-                    <li>
-                        <a href="https://forum.infinityfree.com/">Community Forum</a>
-                    </li>
-                </ul>
-                <ul class="footer-secondary-links list-reset">
-                    <li>
-                        <a href="https://www.infinityfree.com">
-                            Create your own completely free web hosting account with InfinityFree!
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Play Ludo, <span class="highlight">Win Real Money!</span></h1>
+                    <p>Experience the ultimate Ludo gaming platform with real players from around the world. Compete, win, and cash out your earnings instantly!</p>
+                    
+                    <ul class="features-list">
+                        <li>Play Ludo with Real Players</li>
+                        <li>Win Real Money & Rewards</li>
+                        <li>Instant Withdrawal</li>
+                        <li>Secure & Fair Gaming</li>
+                        <li>24/7 Customer Support</li>
+                    </ul>
+
+                    <div class="cta-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.pragatiya.ludoclashroyal" class="btn btn-primary">
+                            📱 Download Now
                         </a>
-                    </li>
-                </ul>
-                <div class="footer-copyright">
-                    Copyright &copy; InfinityFree, All rights reserved
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="game-mockup">🎮</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Ludo Clash Royal?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Real Money Rewards</h3>
+                    <p>Win cash prizes playing your favorite Ludo game. Withdraw anytime, anywhere!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Skill-Based Gaming</h3>
+                    <p>Use your strategy and skills to beat opponents and climb the leaderboard.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Secure</h3>
+                    <p>Your money and data are protected with latest encryption technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Matches</h3>
+                    <p>Play 1-minute quick games or long tournaments - you choose!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Play Anywhere</h3>
+                    <p>Play on mobile anytime, anywhere with our optimized app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Bonus & Offers</h3>
+                    <p>Get daily bonuses, referral rewards, and seasonal promotions!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <h2>Ready to Play & Win?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 50px;">Download Ludo Clash Royal today and start winning real money!</p>
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.pragatiya.ludoclashroyal" class="play-store-btn">
+                    <span class="play-store-icon">🎮</span>
+                    Download on Google Play
+                </a>
+            </div>
+            <p style="opacity: 0.9; font-size: 0.95rem;">Available on Android • Free to download • Play with friends worldwide</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Ludo Clash Royal. All rights reserved.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">Play responsibly. Must be 18+ to participate.</p>
         </div>
     </footer>
 </body>
