@@ -4,142 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Ludo Clash Royal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #fff9ec;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
             color: #333;
             line-height: 1.6;
         }
 
-        header {
-            background-color: #ffd700;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            animation: fadeInDown 1s ease;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 26px;
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            animation: fadeInUp 1s ease;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        h2 {
-            color: #d47f00;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 8px;
         }
 
-        footer {
+        .header-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            color: #667eea;
+        }
+
+        /* Page Content */
+        .page-content {
+            min-height: calc(100vh - 200px);
+            background: white;
+            padding: 60px 0;
+        }
+
+        .page-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .page-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .page-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #764ba2;
+        }
+
+        .page-content p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .page-content ul, .page-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .page-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .updated-date {
+            color: #999;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
             text-align: center;
-            padding: 20px;
-            background-color: #fff0cc;
-            color: #888;
-            font-size: 14px;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-content h1 {
+                font-size: 2rem;
+            }
+
+            .page-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .header-nav {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="https://play-lh.googleusercontent.com/uYGNLSeWNQmXfXo4Z2qIL8CvjFG-BZfH6V_RKJLGvGzk3ZnZ0pAF0dj1Ar1XqkHKqJR4=w240-h480-rw" alt="Ludo Clash Royal">
+                    <span>Ludo Clash Royal</span>
+                </a>
+                <nav class="header-nav">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="privacypolicy.html">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <h1>Privacy Policy</h1>
-</header>
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="updated-date"><strong>Last Updated: January 2024</strong></p>
 
-<div class="container">
-    <h2>1. Introduction</h2>
-    <p>
-        Welcome to <strong>Ludo Clash Royal – Multiplayer</strong>. We value your privacy and are committed to protecting your personal data.
-        This Privacy Policy outlines how we handle your data when you use our app.
-    </p>
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>Ludo Clash Royal</strong>. We value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we handle your data when you use our app.</p>
 
-    <h2>2. Information We Collect</h2>
-    <p>We do not collect any personally identifiable information. However, we may collect the following non-personal data:</p>
-    <ul>
-        <li><strong>Device Information:</strong> Model, OS version, device language (for analytics & crash reports)</li>
-        <li><strong>Gameplay Activity:</strong> Number of games played, time spent, features used</li>
-        <li><strong>Ad Performance:</strong> Impression count, click-through rate (via ad network SDKs)</li>
-    </ul>
+            <h2>2. Information We Collect</h2>
+            <p>We do not collect any personally identifiable information. However, we may collect the following non-personal data:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Model, OS version, device language (for analytics & crash reports)</li>
+                <li><strong>Gameplay Activity:</strong> Number of games played, time spent, features used</li>
+                <li><strong>Ad Performance:</strong> Impression count, click-through rate (via ad network SDKs)</li>
+            </ul>
 
-    <h2>3. Use of Information</h2>
-    <p>We use collected data to:</p>
-    <ul>
-        <li>Improve game performance and user experience</li>
-        <li>Analyze gameplay behavior to improve future updates</li>
-        <li>Serve relevant and non-intrusive ads</li>
-        <li>Detect and prevent crashes, bugs, or app misuse</li>
-    </ul>
+            <h2>3. Use of Information</h2>
+            <p>We use collected data to:</p>
+            <ul>
+                <li>Improve game performance and user experience</li>
+                <li>Analyze gameplay behavior to improve future updates</li>
+                <li>Serve relevant and non-intrusive ads</li>
+                <li>Detect and prevent crashes, bugs, or app misuse</li>
+            </ul>
 
-    <h2>4. Ads & Third-Party Services</h2>
-    <p>We use trusted third-party services that may collect limited, anonymous data:</p>
-    <ul>
-        <li><strong>Google AdMob:</strong> For displaying ads within the app</li>
-        <li><strong>Firebase Analytics:</strong> To understand app usage trends</li>
-        <li><strong>Crashlytics:</strong> To detect and fix app crashes</li>
-    </ul>
-    <p>
-        These services may use identifiers like Advertising ID (AAID) to serve better content. No personal information is shared with these providers.
-    </p>
+            <h2>4. Ads & Third-Party Services</h2>
+            <p>We use trusted third-party services that may collect limited, anonymous data:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> For displaying ads within the app</li>
+                <li><strong>Firebase Analytics:</strong> To understand app usage trends</li>
+                <li><strong>Crashlytics:</strong> To detect and fix app crashes</li>
+            </ul>
+            <p>These services may use identifiers like Advertising ID (AAID) to serve better content. No personal information is shared with these providers.</p>
 
-    <h2>5. Children’s Privacy</h2>
-    <p>
-        We are committed to protecting children's privacy. Our app is designed to be safe and friendly for users of all ages.
-    </p>
-    <ul>
-        <li>We do not knowingly collect personal data from children under 13.</li>
-        <li>The content is free from violence, inappropriate ads, or harmful links.</li>
-        <li>Parental guidance is still recommended for better digital habits.</li>
-    </ul>
+            <h2>5. Children's Privacy</h2>
+            <p>We are committed to protecting children's privacy. Our app is designed to be safe and friendly for users of all ages.</p>
+            <ul>
+                <li>We do not knowingly collect personal data from children under 13.</li>
+                <li>The content is free from violence, inappropriate ads, or harmful links.</li>
+                <li>Parental guidance is still recommended for better digital habits.</li>
+            </ul>
 
-    <h2>6. Data Storage & Security</h2>
-    <p>
-        We do not store any user data on our own servers. All analytics and ads data are managed securely by trusted third-party providers.
-    </p>
-    <ul>
-        <li>Data is encrypted during transfer via secure protocols.</li>
-        <li>Only anonymized, non-identifiable data is used for app improvement.</li>
-    </ul>
+            <h2>6. Data Storage & Security</h2>
+            <p>We do not store any user data on our own servers. All analytics and ads data are managed securely by trusted third-party providers.</p>
+            <ul>
+                <li>Data is encrypted during transfer via secure protocols.</li>
+                <li>Only anonymized, non-identifiable data is used for app improvement.</li>
+            </ul>
 
-    <h2>7. User Control & Consent</h2>
-    <ul>
-        <li>You are not required to register or share personal data to use the app.</li>
-        <li>You can clear data anytime by uninstalling the app.</li>
-        <li>If any permissions are requested (e.g., storage), they are only used for gameplay and never shared externally.</li>
-    </ul>
+            <h2>7. User Control & Consent</h2>
+            <ul>
+                <li>You are not required to register or share personal data to use the app.</li>
+                <li>You can clear data anytime by uninstalling the app.</li>
+                <li>If any permissions are requested (e.g., storage), they are only used for gameplay and never shared externally.</li>
+            </ul>
 
-    <h2>8. Policy Updates</h2>
-    <p>
-        We may update this Privacy Policy from time to time. Changes will be reflected in this document. Continued use of the app after updates implies your acceptance.
-    </p>
+            <h2>8. Policy Updates</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be reflected in this document. Continued use of the app after updates implies your acceptance.</p>
 
-    <h2>9. Contact Us</h2>
-    <p>
-        If you have any questions, feedback, or concerns about our Privacy Policy, feel free to contact us at:  
-        <strong>support@ludoclashroyal.com</strong>
-    </p>
-</div>
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions, feedback, or concerns about our Privacy Policy, feel free to contact us at:</p>
+            <p><strong>Email:</strong> support@ludoclashroyal.com</p>
+        </div>
+    </div>
 
-
-<footer>
-    &copy; 2025 Ludo Clash Royal. All rights reserved.
-</footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+            </div>
+            <p>&copy; 2024 Ludo Clash Royal. All rights reserved.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">Play responsibly. Must be 18+ to participate.</p>
+        </div>
+    </footer>
 </body>
 </html>
